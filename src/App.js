@@ -9,7 +9,7 @@ import Category from './Category'
 import { Fragment,useEffect } from 'react';
 
 function App() {
-  const url="https://affiliate-api-7077.herokuapp.com/"
+  const url="https://sheltered-ocean-62008.herokuapp.com/"
   useEffect(()=>{
     const header=document.querySelector('.banner')
     const navHeight=document.querySelector('.navbar').getBoundingClientRect().height;
