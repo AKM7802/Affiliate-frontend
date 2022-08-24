@@ -334,7 +334,7 @@ a:hover{
   display: flex;
 }
 .item-details{
-  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -345,7 +345,7 @@ a:hover{
 }
 
 .item-image{
-  width: 40rem;
+  max-width: 40rem;
   max-height: 30rem;
   margin:1rem;
 
