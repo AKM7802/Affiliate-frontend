@@ -10,6 +10,7 @@ import { Fragment,useEffect } from 'react';
 
 function App() {
   const url="https://sheltered-ocean-62008.herokuapp.com/"
+
   useEffect(()=>{
     const header=document.querySelector('.banner')
     const navHeight=document.querySelector('.navbar').getBoundingClientRect().height;
@@ -18,10 +19,16 @@ function App() {
     const stickyNav=function(entries){
         const entry=entries[0]  //Since there is only one threshold we do not need to loop over entries
 
-        console.log(entry.isIntersecting)
-        if(!entry.isIntersecting) document.querySelector('.navbar').classList.add('sticky');
+        
+        if(!entry.isIntersecting){
+         
+          document.querySelector('.navbar').classList.add('sticky');
+        }
 
-        else document.querySelector('.navbar').classList.remove('sticky');
+        else {
+          document.querySelector('.navbar').classList.remove('sticky');
+          
+        }
     }
 
     const headerObserver=new IntersectionObserver(stickyNav,{

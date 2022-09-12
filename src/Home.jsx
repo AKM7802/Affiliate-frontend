@@ -1,4 +1,4 @@
-import { useEffect,useState } from 'react'
+import { useState } from 'react'
 
 
 const Home=(props)=>{
@@ -20,15 +20,16 @@ const Home=(props)=>{
         
 
     }
-
-    useEffect(()=>{
-        loadContent()
-    },[])
+    loadContent()
+    // useEffect(()=>{
+    //     loadContent()
+    // },[])
 
     return(
     <div class="content">
         <div class="home-content-block">
             {containerdata.map((container)=>{
+                index=0;
                 return(<>
                     <h1 class="content-block-heading"><a href={`/${container._id}`}>{container.cName}</a></h1>
                     
@@ -51,9 +52,9 @@ const Home=(props)=>{
                                     </div>
                                     
                                 </div>
-                            )}
+                            )}else return null
                         })}
-                        {index=0}
+                       
                         
 
                         

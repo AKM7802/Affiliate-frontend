@@ -4,7 +4,7 @@ const Header=()=>{
     
 
     return(
-        <nav class="navbar navbar-expand-lg header sticky">
+        <nav class="navbar navbar-expand-lg header">
             <div class="container-fluid">
                         <a class="navbar-brand" href="#">TheTopTen</a>
                    

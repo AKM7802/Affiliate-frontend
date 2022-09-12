@@ -26,7 +26,8 @@ const Content=(props)=>{
         
     }
     useEffect(()=>{
-        loadContent()
+        loadContent();
+        document.querySelector('.navbar').classList.add('sticky2');
         
     },[])
     
@@ -75,7 +76,7 @@ const Content=(props)=>{
                     
                 </div>
                 </>
-                : <h1>Server Error</h1>}
+                : null}
                 
             
                 </div>

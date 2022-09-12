@@ -7,7 +7,7 @@ const Category=(props)=>{
         
         const containerlink=await fetch(`${props.url}api/containers`)
         const containerjson=await containerlink.json()
-        console.log(containerjson.data.doc)
+        
         setcontents(containerjson.data.doc)
     }
 

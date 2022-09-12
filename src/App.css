@@ -20,18 +20,23 @@ body{
   font-family: Arial, Helvetica, sans-serif
 }
 
-
+.App{
+  position: relative;
+}
 
 .navbar-collapse{
   flex-grow: 0;
 }
 
 .navbar{
-  background-color: rgba(233, 255, 255, 0.799);
+  background-color:transparent;
+  position: absolute;
+  top: 0;
   font-size: 1.2rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  box-shadow: 0 1px 90px rgba(57, 56, 56, 0.722);
+ 
+  z-index: 200;
 
 }
 .nav-item{
@@ -39,22 +44,32 @@ body{
 
 }
 
+
 .navbar-brand{
   font-size: 2rem;
   font-weight: 700;
   color:var(--color-brand)
 }
 .navbar-brand:hover{
-  color: var(--color-brand)
+  color: var(--color-brand);
+
 }
 .header{
   width: 100%;
 }
 .sticky{
-  position: sticky;
-  background-color: rgba(233, 255, 255);
+  position: fixed;
+  background-color: rgb(250, 255, 255);
   z-index: 400;
   top: 0;
+  box-shadow: 0 1px 90px rgba(57, 56, 56, 0.722);
+}
+.sticky2{
+  position: sticky;
+  background-color: rgb(250, 255, 255);
+  z-index: 400;
+  top: 0;
+  box-shadow: 0 1px 90px rgba(57, 56, 56, 0.722);
 }
 a{
   text-decoration: none;
@@ -65,10 +80,14 @@ a:hover{
   color: inherit;
 }
 
-.banner-image0{
-  height: 75vh;
-  width: 100%;
+.banner-content{
+  height: 80vh;
 }
+.d-block{
+  height: 100%;
+  object-fit: cover;
+}
+
 .home-content-block{
   padding: 0 1rem;
 }
