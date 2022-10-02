@@ -31,7 +31,7 @@ const Home=(props)=>{
             {containerdata.map((container)=>{
                 index=0;
                 return(<>
-                    <h1 class="content-block-heading"><a href={`/${container._id}`}>{container.cName}</a></h1>
+                    <h1 class="content-block-heading"><a href={`/${container._id}`}>{container.cName} </a></h1>
                     
                     <div class="content-card-collection">
                         {productdata.map((product,i)=>{

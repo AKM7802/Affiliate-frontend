@@ -1,19 +1,18 @@
+import { useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 const Banner=()=>{
-
-    
+  
     return(
         <Carousel className='banner'>
             <Carousel.Item interval={4000} className="banner-content">
                 <img
                     className="d-block w-100"
-                    src="https://www.hdwallpapers.in/download/white_flowers_branches_in_white_background_hd_white_aesthetic-HD.jpg"
+                    src="./img/banner/white_flowers_branches_in_white_background_hd_white_aesthetic.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h1 className="banner-heading"></h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={3000} className="banner-content">
@@ -24,8 +23,7 @@ const Banner=()=>{
                 />
         
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h1 className="banner-heading"></h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={2000} className="banner-content">
@@ -36,10 +34,7 @@ const Banner=()=>{
                 />
         
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                    Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
+                    <h1 className='banner-heading'></h1>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
