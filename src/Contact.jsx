@@ -1,6 +1,6 @@
 const Contact=()=>{
     return(
-        <div className="contact">
+        <div className="contact" id="contact">
    
             <div className="contact-encloser">
 

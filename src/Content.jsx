@@ -34,13 +34,13 @@ const Content=(props)=>{
     
     return(
                 <div className="top-list-content">
-                {Object.keys(containerdata).length !=0 ? 
+                {Object.keys(containerdata).length !==0 ? 
                     <>
                     <div className="title">
                         <h1 className="page-title">{ containerdata.cName }</h1>
                         <div className="title-div">
                             <div>
-                                <img src={containerdata.images[0]}  className="title-image"></img>
+                                <img src={containerdata.images[0]} alt="" className="title-image"></img>
                             </div>
                             <p className="title-description">{containerdata.containerDescription}</p>
                         
@@ -50,11 +50,11 @@ const Content=(props)=>{
                 <div className="items">
                     {productdata.map((product,i)=>{
                         return(
-                        <>
+                        <div class="item0">
                             <h1 className="item-title">{i+1}.{product.productName}</h1>
                             <div className="item-pilot-bar">
                                <div className='image-container'>
-                                 <img src={product.images[0]} className="item-image"></img>
+                                 <img src={product.images[0]} className="item-image" alt=""></img>
                                </div>
                                 
                                 
@@ -66,13 +66,13 @@ const Content=(props)=>{
                                         <h3 className="item-price">Rs:{product.price || '7,999'}</h3>
                                     </div>
                                     
-                                    <button className="item-link">Check out the course</button>
+                                    <button className="item-link">Check out the item</button>
                                 </div>
                             </div>
                         
                             <p className="item-description">{product.description}</p>
                             
-                        </>)
+                        </div>)
                     })}
                     
                 </div>

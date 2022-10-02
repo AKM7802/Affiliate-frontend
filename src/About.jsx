@@ -6,7 +6,7 @@ const About=()=>{
         <div className="about" id="about">
             <div className="about_content_encloser section">
                     <h2 className="about_heading">About Us</h2>
-                    <p className="about_para">Nullam eget bibendum nulla. Sed sit amet varius justo, non iaculis dolor. Suspendisse potenti. Duis tincidunt iaculis sem, nec ornare erat finibus sed. Vivamus lobortis diam id sodales posuere. Pellentesque quis tortor at purus posuere mollis. Aenean non tortor dictum, rutrum turpis vitae, lobortis nibh. Sed tristique pellentesque arcu non ornare. Nullam sagittis id velit quis tempus. Fusce mollis viverra libero vel accumsan. Nunc efficitur dui sit amet finibus auctor. Curabitur semper odio metus, sed finibus tortor ullamcorper at.</p>
+                    <p className="about_para">FindYourWayOnline is a leading provider of digital products and services. We help our customers find their way online by providing them with innovative and easy-to-use products and services.We are committed to providing our customers with the best possible experience. We believe that by providing our customers with the best possible products and services, we will be able to help them find their way online.Our mission is to make it easy for our customers to find their way online. We do this by providing them with products and services that are easy to use and that make their online experience more enjoyable.We will keep posting important posts on this website for all of you.</p>
 
             </div>
             <div className="about_bg">
