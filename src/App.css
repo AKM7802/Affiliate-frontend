@@ -116,7 +116,7 @@ a:hover{
   font-size: 2rem;
   font-weight: 550;
   color: var(--color-heading);
-  text-decoration: underline;
+ 
 }
 .category-file:hover{
   transform: scale(1.05);
