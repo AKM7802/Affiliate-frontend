@@ -12,7 +12,9 @@ const Category=(props)=>{
     }
 
     useEffect(()=>{
-        loadContent()
+        loadContent();
+
+        
     },[])
 
     return (
@@ -22,13 +24,16 @@ const Category=(props)=>{
             <div className="category-block">
                 {contents.map((content)=>{
                     return(
+                        
                         <div className="category-file">
-                            <a href={`/${content._id}`}>
-                                <img src={content.images[0]} className="file-image"></img>
+                            <a href={`/${content.slug}`}>
+                                <img src={`img/containers/${content.images[0]}`} className="file-image"></img>
                                 <h2 className="file-image-header">{content.cName}</h2>
-                            </a>
+                            
                             <div className="trans"></div>
+                            </a>
                         </div>
+                        
                     )
                 })
                 }

@@ -12,11 +12,13 @@ import { Fragment, useEffect} from 'react';
 
 
 function App() {
-  const url="https://sheltered-ocean-62008.herokuapp.com/"
+  //const url="https://sheltered-ocean-62008.herokuapp.com/"
+  //const url="http://localhost:8080/"
+  const url="fywo/"
   useEffect(()=>{
-        const header=document.querySelector('.banner') 
+        // const header=document.querySelector('.banner') 
       
-        const navHeight=document.querySelector('.navbar').getBoundingClientRect().height;
+        // const navHeight=document.querySelector('.navbar').getBoundingClientRect().height;
        
         const sectionAll=document.querySelectorAll('.section')
 
@@ -37,12 +39,12 @@ function App() {
 
         
 
-        const headerObserver=new IntersectionObserver(stickyNav,{
-            root:null,
-            threshold:0,
-            //rootMargin: "-20px"
-            rootMargin:`-${navHeight}px` //To make the nav appear at its exact height before reaching the specified position in threshold
-        })
+        // const headerObserver=new IntersectionObserver(stickyNav,{
+        //     root:null,
+        //     threshold:0,
+        //     //rootMargin: "-20px"
+        //     rootMargin:`-${navHeight}px` //To make the nav appear at its exact height before reaching the specified position in threshold
+        // })
 
         
         let lastScroll=0;
@@ -61,9 +63,9 @@ function App() {
 
         const unhide=function(entries){
           const [entry]=entries;
-          //if(!entry.isIntersecting) return;
-          //entry.target.classList.remove('section-hidden')
-          entry.target.classList.toggle('section-hidden',!entry.isIntersecting)
+          if(!entry.isIntersecting) return;
+          entry.target.classList.remove('section-hidden')
+          //entry.target.classList.toggle('section-hidden',!entry.isIntersecting)
         }
         const sectionObserver=new IntersectionObserver(unhide,{
           root:null,
@@ -72,8 +74,10 @@ function App() {
       })
 
       sectionAll.forEach(individual=>{
+        individual.classList.add('section-hidden')  
         sectionObserver.observe(individual)
-        //individual.classList.add('section-hidden')  
+        
+        
     })
 
         
@@ -91,12 +95,14 @@ function App() {
                   
                   <About/>
                   <Category url={url}/>
-                  <Contact/>
+                  
                 </Fragment>}>
               </Route>
               <Route path="/:id" element={<Content url={url}/>}></Route>
               <Route path="/category" element={<Category url={url}/>}></Route>
+              <Route path="/about" element={<About url={url}/>}></Route>
           </Routes>
+          <Contact/>
       </Router>
       
 

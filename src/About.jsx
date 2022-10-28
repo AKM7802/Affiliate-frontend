@@ -1,7 +1,7 @@
 
 
 const About=()=>{
-
+   
     return(
         <div className="about" id="about">
             <div className="about_content_encloser section">

@@ -7,10 +7,9 @@ const Contact=()=>{
            
             
             <ul className="contact-list">
-                <li className="list0"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li className="list0"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                <li className="list0"><a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
-                <li className="list0"><a href="https://www.twitter.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li className="list0"><a href="https://instagram.com/findyourwayonline?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a></li>
+                <li className="list0"><a href="https://twitter.com/FindUrWayOnline?t=j-qMxjMiEacB_F3LoBU4ew&s=09"><i class="fa-brands fa-twitter"></i></a></li>
+                <li className="list0"><a href="https://www.linkedin.com/in/findyourwayonline-undefined-906422255"><i class="fa-brands fa-linkedin"></i></a></li>
 
             </ul>
             

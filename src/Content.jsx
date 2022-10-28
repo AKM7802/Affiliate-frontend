@@ -29,6 +29,7 @@ const Content=(props)=>{
         loadContent();
         document.querySelector('.navbar').classList.add('sticky2');
         document.querySelector('.cat').setAttribute("href","/category");
+        document.querySelector('.abt').setAttribute("href","/about");
         
     },[])
     
@@ -39,9 +40,7 @@ const Content=(props)=>{
                     <div className="title">
                         <h1 className="page-title">{ containerdata.cName }</h1>
                         <div className="title-div">
-                            <div>
-                                <img src={containerdata.images[0]} alt="" className="title-image"></img>
-                            </div>
+                            
                             <p className="title-description">{containerdata.containerDescription}</p>
                         
                         
@@ -54,19 +53,19 @@ const Content=(props)=>{
                             <h1 className="item-title">{i+1}.{product.productName}</h1>
                             <div className="item-pilot-bar">
                                <div className='image-container'>
-                                 <img src={product.images[0]} className="item-image" alt=""></img>
+                                 <img src={`img/products/${product.images[0]}`} className="item-image" alt=""></img>
                                </div>
                                 
                                 
                                
                                 <div className="item-details">
                                     <div className="container">
-                                        <h3 className="item-author">Author:{product.authorName}</h3>
-                                        <h3 className="item-rating">Rating: {product.ratingsAverage}</h3>
-                                        <h3 className="item-price">Rs:{product.price || '7,999'}</h3>
+                                        <h3 className="item-author">Stars: <span>{product.stars}</span></h3>
+                                        <h3 className="item-rating">Forked By: <span>{product.forked}</span></h3>
+                                        
                                     </div>
                                     
-                                    <button className="item-link">Check out the item</button>
+                                    <a href={product.repo_url} className="item-link">Check out the repo!</a>
                                 </div>
                             </div>
                         

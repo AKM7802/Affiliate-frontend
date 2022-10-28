@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 
 const Home=(props)=>{
@@ -20,38 +20,42 @@ const Home=(props)=>{
         
 
     }
-    loadContent()
-    // useEffect(()=>{
-    //     loadContent()
-    // },[])
+   
+    useEffect(()=>{
+        loadContent();
+    },[])
 
     return(
-    <div class="content">
+    <div class="content" id="content">
         <div class="home-content-block">
             {containerdata.map((container)=>{
                 index=0;
                 return(<>
-                    <h1 class="content-block-heading"><a href={`/${container._id}`}>{container.cName} </a></h1>
+                    <h1 class="content-block-heading"><a href={`/${container.slug}`}>{container.cName} <i class="fa-solid fa-chevron-right"></i> </a></h1>
                     
                     <div class="content-card-collection">
                         {productdata.map((product,i)=>{
                             if(product.productContainer===container._id){
                             index++;
                             return(
-                                <div class="content-card">
+                                <a href={product.repo_url} class="content-card">
+                                <div >
                                     <div className='position'>{index}</div>
-                                    <img class="product-pic" src={product.images[0]}></img>
+                                    <img class="product-pic" src={`img/products/${product.images[0]}`} alt=""></img>
                                     <div class="card-details">
                                         <h2 class="product-title">{product.productName}</h2>
-                                        <h4 class="author-name">{product.authorName}</h4>
-                                        <p class="product-price">{product.price || "Rs:7999"}</p>
+                                        <h4 class="git-info">Stars: <span>{product.stars}</span></h4>
+                                        <h4 class="git-info">Forked by: <span>{product.forked}</span></h4>
+                                       
+                                        
                                         <div class="buy-now">
-                                            <button>Check Out The Course!</button>
+                                            <button>Check Out The Repo!</button>
                                         </div>
                                         
                                     </div>
                                     
                                 </div>
+                                </a>
                             )}else return null
                         })}
                        
